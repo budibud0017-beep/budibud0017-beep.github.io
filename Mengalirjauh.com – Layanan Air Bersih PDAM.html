@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mengalirjauh.com – Layanan Air Bersih PDAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4faff;--surface:#fff;--ink:#0a2a43;--muted:#476379;--brand:#0b63b5;--sky:#00aeef;--light:#3bb5ff;--deep:#1189b9;--line:#d3e7f5;--ok:#0a7d4f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07182a;--surface:#0d2740;--ink:#e8f4ff;--muted:#9bb8cf;--brand:#5db8ff;--line:#1c3d5c;--ok:#4fd39a}}
+:root[data-theme="dark"]{--bg:#07182a;--surface:#0d2740;--ink:#e8f4ff;--muted:#9bb8cf;--brand:#5db8ff;--line:#1c3d5c;--ok:#4fd39a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--brand)}
+nav{display:flex;gap:22px;font-size:15px;font-weight:500;overflow-x:auto}
+nav a{text-decoration:none;color:var(--muted);white-space:nowrap}nav a:hover{color:var(--brand)}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:12px 22px;border-radius:999px;background:var(--brand);color:#fff;text-decoration:none}
+:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{--x:0}
+.btn.alt{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 56px}
+h1{font-size:clamp(34px,5.5vw,56px);line-height:1.08;margin:0 0 18px;letter-spacing:-.02em;font-weight:800;color:var(--brand)}
+.hero p{font-size:18px;color:var(--muted);max-width:46ch;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sim{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:24px}
+.sim h2{font-size:18px;margin:0 0 4px}
+.sim small{color:var(--muted)}
+.glass{position:relative;height:150px;margin:16px 0;border-radius:18px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+.fill{position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(var(--light),var(--deep));transition:height .35s}
+.fill::before{content:"";position:absolute;left:-10%;right:-10%;top:-12px;height:24px;background:var(--light);border-radius:50%}
+.glass b{position:absolute;left:16px;top:12px;font-size:34px;color:var(--ink);text-shadow:0 0 12px var(--bg)}
+.glass b span{font-size:15px;font-weight:500}
+input[type=range]{width:100%;accent-color:var(--sky)}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;font-weight:700}
+.total strong{font-size:26px;color:var(--brand)}
+section{padding:56px 0}
+section h2.t{font-size:clamp(26px,4vw,36px);margin:0 0 8px;letter-spacing:-.01em;color:var(--brand)}
+.lead{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.card h3{margin:10px 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.ic{width:44px;height:44px;border-radius:14px;background:var(--sky);display:grid;place-items:center}
+.band{background:var(--brand);color:#fff}
+:root[data-theme="dark"] .band,:root:not([data-theme="light"]) .band{--k:0}
+.stats{display:flex;flex-wrap:wrap;gap:32px 56px;padding:36px 0}
+.stats div{font-size:15px;opacity:.9}.stats b{display:block;font-size:34px;line-height:1.1}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:420px}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+tr:last-child td{border:0}th{color:var(--muted);font-weight:500;font-size:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+label{display:block;font-weight:500;font-size:14px;margin:14px 0 6px}
+input[type=text],input[type=tel],select,textarea{width:100%;font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+#msg{margin-top:14px;font-weight:500;color:var(--ok);min-height:24px}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:760px){.hero,.two{grid-template-columns:1fr}.hero{padding-top:36px}header .wrap{height:auto;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.fill{transition:none}html{scroll-behavior:auto}}
+.kontak{background:linear-gradient(#051f2b,#0f3b34 55%,#4a6a3a);color:#fff;padding:48px 0}
+.kontak h2{margin:0 0 28px;font-size:clamp(24px,4vw,32px);letter-spacing:-.01em}
+.kg{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+.ki{display:flex;align-items:center;gap:16px;color:#fff;text-decoration:none;font-size:18px;line-height:1.4}
+.ki i{flex:none;width:56px;height:56px;border-radius:50%;background:#fff;display:grid;place-items:center}
+a.ki:hover span{text-decoration:underline}
+@media(max-width:760px){.kg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#"><svg width="34" height="38" viewBox="0 0 34 38" aria-hidden="true"><path d="M17 0c1 7 8 10 8 17a8 8 0 0 1-16 0c0-7 7-10 8-17z" fill="#00aeef"/><path d="M2 20a15 15 0 0 0 30 0 11 11 0 0 1-30 0z" fill="#1189b9"/><path d="M2 16a15 15 0 0 0 30 0c-3 6-9 9-15 9S5 22 2 16z" fill="#3bb5ff" opacity=".0"/></svg>Mengalirjauh.com</a>
+<nav aria-label="Menu utama"><a href="#layanan">Layanan</a><a href="#tarif">Tarif</a><a href="#lapor">Lapor gangguan</a><a href="#kontak">Kontak</a></nav>
+</div></header>
+
+<main>
+<div class="wrap hero">
+<div>
+<h1>Air bersih mengalir sampai ke rumah Anda.</h1>
+<p>Pasang sambungan baru, hitung tagihan, dan laporkan pipa bocor atau air mati dalam satu tempat.</p>
+<div class="cta"><a class="btn" href="#lapor">Lapor gangguan</a><a class="btn alt" href="#layanan">Lihat layanan</a></div>
+</div>
+<div class="sim" aria-labelledby="simh">
+<h2 id="simh">Hitung tagihan bulanan</h2>
+<small>Geser sesuai pemakaian air Anda.</small>
+<div class="glass"><div class="fill" id="fill"></div><b><span id="mv">12</span> <span>m³</span></b></div>
+<input type="range" id="m3" min="0" max="60" value="12" aria-label="Pemakaian air dalam meter kubik">
+<div class="total"><span>Perkiraan tagihan</span><strong id="tot">Rp 0</strong></div>
+</div>
+</div>
+
+<div class="band"><div class="wrap stats">
+<div><b>24 jam</b>air mengalir setiap hari</div>
+<div><b>1×24 jam</b>respons laporan gangguan</div>
+<div><b>3 cara</b>bayar: loket, bank, dan dompet digital</div>
+</div></div>
+
+<section id="layanan"><div class="wrap">
+<h2 class="t">Layanan untuk pelanggan</h2>
+<p class="lead">Semua keperluan air bersih Anda, dari pendaftaran sampai pengaduan.</p>
+<div class="grid">
+<div class="card"><div class="ic"><svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div><h3>Pasang baru</h3><p>Daftar sambungan rumah tangga, usaha, atau sosial. Tim survei datang ke lokasi Anda.</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Cek dan bayar tagihan</h3><p>Lihat rincian pemakaian dan bayar lewat bank, minimarket, atau dompet digital.</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18v.5"/></svg></div><h3>Lapor gangguan</h3><p>Pipa bocor, air keruh, atau aliran mati. Laporan Anda langsung diteruskan ke petugas.</p></div>
+<div class="card"><div class="ic"><svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0M4 12l3 4M20 12l-3 4M12 20v-8"/></svg></div><h3>Ganti meter air</h3><p>Ajukan penggantian atau pengecekan meter jika angka tidak wajar atau meter rusak.</p></div>
+</div></div></section>
+
+<section id="tarif" style="padding-top:0"><div class="wrap">
+<h2 class="t">Tarif air rumah tangga</h2>
+<p class="lead">Contoh tarif progresif yang dipakai pada simulasi di atas. Ganti dengan tarif resmi PDAM Anda.</p>
+<div class="tw"><table>
+<thead><tr><th>Pemakaian</th><th>Tarif per m³</th></tr></thead>
+<tbody><tr><td>0–10 m³</td><td>Rp 4.500</td></tr><tr><td>11–20 m³</td><td>Rp 6.000</td></tr><tr><td>Di atas 20 m³</td><td>Rp 8.000</td></tr><tr><td>Biaya administrasi</td><td>Rp 5.000 per bulan</td></tr></tbody>
+</table></div></div></section>
+
+<section id="lapor" style="padding-top:0"><div class="wrap two">
+<div>
+<h2 class="t">Lapor gangguan air</h2>
+<p class="lead">Isi data berikut. Petugas akan menghubungi Anda untuk memastikan lokasi.</p>
+</div>
+<div class="card">
+<label for="nm">Nama</label><input type="text" id="nm" autocomplete="name">
+<label for="hp">Nomor WhatsApp</label><input type="tel" id="hp" autocomplete="tel" placeholder="08xxxxxxxxxx">
+<label for="jn">Jenis gangguan</label>
+<select id="jn"><option>Pipa bocor</option><option>Air tidak mengalir</option><option>Air keruh atau berbau</option><option>Tekanan air kecil</option></select>
+<label for="al">Alamat lengkap</label><textarea id="al" rows="3"></textarea>
+<p style="margin:16px 0 0"><button class="btn" id="kirim" type="button">Kirim laporan</button></p>
+<div id="msg" role="status"></div>
+</div>
+</div></section>
+</main>
+
+<section class="kontak" id="kontak"><div class="wrap">
+<h2>Hubungi kami</h2>
+<div class="kg">
+<a class="ki" href="https://www.mengalirjuah.co.id"><i><svg width="32" height="32" fill="none" stroke="#0f3b34" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4.5 6.5 4.5 10S15 19 12 22c-3-3-4.500-6.500-4.500-10S9 5 12 2z"/></svg></i><span>www.mengalirjuah.co.id</span></a>
+<div class="ki"><i><svg width="32" height="32" viewBox="0 0 24 24" fill="#0f3b34"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.500 3.600-7 8-7s8 2.500 8 7z"/></svg></i><span>@mengalirjauh.com</span></div>
+<a class="ki" href="tel:+6289621964316"><i><svg width="30" height="30" viewBox="0 0 24 24" fill="#0b5f7a"><path d="M6.600 10.800a15 15 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.25 11 11 0 0 0 3.500.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.200.2 2.400.56 3.500a1 1 0 0 1-.25 1z"/></svg></i><span>62-896-2196-4316<br>(BAYU)</span></a>
+<div class="ki"><i><svg width="30" height="30" viewBox="0 0 24 24" fill="#0f3b34"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></i><span>Jl. Mangga Muda 17A, Cilandak,<br>Jakarta Selatan 12310</span></div>
+</div></div></section>
+<footer><div class="wrap">
+<span>© 2026 Mengalirjauh.com. Layanan air bersih PDAM.</span>
+</div></footer>
+
+<script>
+var rp=function(n){return "Rp "+Math.round(n).toLocaleString("id-ID")};
+function hitung(v){var t=Math.min(v,10)*4500+Math.max(0,Math.min(v,20)-10)*6000+Math.max(0,v-20)*8000;return t+5000}
+var s=document.getElementById("m3");
+function up(){var v=+s.value;document.getElementById("mv").textContent=v;document.getElementById("tot").textContent=rp(hitung(v));document.getElementById("fill").style.height=(8+v/60*80)+"%"}
+s.addEventListener("input",up);up();
+document.getElementById("kirim").addEventListener("click",function(){
+var n=document.getElementById("nm").value.trim(),h=document.getElementById("hp").value.trim(),a=document.getElementById("al").value.trim(),m=document.getElementById("msg");
+if(!n||!h||!a){m.style.color="#c0392b";m.textContent="Lengkapi nama, nomor WhatsApp, dan alamat.";return}
+m.style.color="";m.textContent="Laporan diterima. Terima kasih, "+n+". Petugas akan menghubungi Anda.";
+});
+</script>
+</body>
+</html>
